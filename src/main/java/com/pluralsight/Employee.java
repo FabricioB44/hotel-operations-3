@@ -103,8 +103,12 @@ public class Employee {
     }
 
     public void punchTimeCard() {
-        hoursWorked = Math.abs(endTime - startTime);
-        hoursWorked = Math.round(hoursWorked * 100.0) / 100.0;
+        try {
+            hoursWorked = Math.abs(endTime - startTime);
+            hoursWorked = Math.round(hoursWorked * 100.0) / 100.0;
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
 
