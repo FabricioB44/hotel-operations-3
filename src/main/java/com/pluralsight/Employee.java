@@ -102,5 +102,10 @@ public class Employee {
         hoursWorked = Math.round(hoursWorked * 100.0) / 100.0;
     }
 
+    public void punchTimeCard() {
+        hoursWorked = Math.abs(endTime - startTime);
+        hoursWorked = Math.round(hoursWorked * 100.0) / 100.0;
+    }
+
 
 }
