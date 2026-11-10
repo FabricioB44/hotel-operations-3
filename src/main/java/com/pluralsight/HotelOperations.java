@@ -5,6 +5,7 @@ public class HotelOperations {
         Room testRoom = new Room(2, 60.99, false, true);
         Reservation testReservation = new Reservation("king", 5, true);
         Employee testEmployee = new Employee(1234, "Joe Smith", "Plumming", 22.50, 46);
+        Hotel testHotel = new Hotel("Test Hotel", 5, 10, 3, 6);
 
         System.out.println("Is room available? " + testRoom.getIsAvailable());
         System.out.println("Room price: " + testReservation.getPrice());
@@ -23,5 +24,8 @@ public class HotelOperations {
 
         testEmployee.punchTimeCard(8.45 , 16.30);
         System.out.println("Employee total hours worked: " + testEmployee.getHoursWorked());
+
+        boolean canBook = testHotel.bookRoom(2, true);
+        System.out.println("Was booking successful? " + canBook);
     }
 }
